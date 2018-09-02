@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TnP NITW</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+#Fac-Ad
+{
+  top:8%;
+  left:10%;
+  width:40%;
+  height:30%;
+  background-color:#adadeb;
+  position:fixed;
+  visibility:hidden;
+  box-shadow:0px 5px 5px 5px #adadeb;
+  opacity:1;
+  overflow: auto;
+  padding-left:5px;
+  padding-bottom:5px;
+    
+}
+</style>
+<script>
+function s11()
+{
+document.getElementById("Fac-Ad").style.visibility="visible";
+}
+function b11()
+{
+document.getElementById("Fac-Ad").style.visibility="hidden";
+}
+</script>
+
+<body class="bd">
+
+<nav class="navbar navbar-default" style="background-color:#17232B">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"><strong>Home</strong></a></li>
+      <li><a href="#"><strong>News</strong></a></li>
+      <li><a onclick="s11();"><strong>Fac-Ad</strong></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <a href="/login/"  class="btn btn-primary navbar-btn" >Login</a>
+    <a href="/regiser/" class="btn btn-info navbar-btn" >Register</a>
+    
+  </ul>
+  </div>
+</nav>
+<div class= "text-center">
+          {% if messages %}
+        
+            {% for message in messages %}
+             <div class="alert alert-{{ message.tags }}" role = 'alert'>
+             <h6>{{ message }}</h6>
+         </div>
+            {% endfor %}
+        
+        {% endif %}
+      </div>
+<marquee scrollamount="5"><font size="3" color="blue">
+  <b>Welcome to training and placement section, National Institute of Technology,Warangal.
+    </font></b>
+  </marquee>
+<div id="Fac-Ad">
+  <div id="close">
+    <button onclick="b11();" class="btn btn-danger">Close</button>
+  </div>
+  <center>
+   <u><h3> <b>Faculty In-charge Training & Placement Officer</h3></u>
+    <p><font size="3" color="black">Dr. Ch. Venkaiah<br>
+      MOBILE: 94901 65357</font></p></b>
+  </center>
+</div>
+<div id="container2">
+<div class="slideshow-container2">
+<div class="mySlides2 fade2">
+  <img src="images/innovation-1.jpg" style="width:100%;height:500px">
+</div>
+
+<div class="mySlides2 fade2">
+  <img src="images/innovation-2.jpg" style="width:100%;height:500px">
+</div>
+
+<div class="mySlides2 fade2">
+  <img src="images/innovation-3.jpg" style="width:100%;height:500px">
+</div>
+
+</div>
+<br>
+<div style="text-align:center;height:35px">
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+  <span class="dot2"></span> 
+</div>
+</div>
+<script type="text/javascript">
+/*slideShow*/ 
+  var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides2");
+    var dots = document.getElementsByClassName("dot2");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active2", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active2";
+    setTimeout(showSlides, 5000);
+}
+</script>
+<div class="footer">
+  <p>National Institute of Technology, Warangal - 506004, TS, INDIA | NITWGL Phone: +91-870-2459191 | FAX : +91-870-2459547</p>
+  <p>Copyright © NIT, Warangal</p>
+</div> 
+ 
+</body>
+</html>

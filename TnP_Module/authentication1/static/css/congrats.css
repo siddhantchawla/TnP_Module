@@ -1,0 +1,29 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.header{
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  height:200px;
+  border:2px solid red;
+  margin-top: 170px;
+  background-color: white;
+}
+body{
+  background-color: rgba(165, 232, 58,0.8);
+}
+.congo{
+  margin-top: 20px;
+  margin-left: 150px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.receive{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  margin-top: 70px;
+  margin-left: 240px;
+}

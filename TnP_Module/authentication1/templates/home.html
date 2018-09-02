@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add_Companies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 3rem 'Fira Sans', sans-serif;
+}
+
+label {
+    display: inline-block;
+    font-size: 2rem;
+    width: 10%;
+}
+
+input[type='text'],
+input[type='password'] {
+    width: 20%;
+}
+
+input {
+    margin: 0.9rem 0;
+}
+
+</style>
+
+<body class="bd">
+
+<nav class="navbar navbar-default" style="background-color:#17232B">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"><strong>Home</strong></a></li>
+      <li><a href="#"><strong>News</strong></a></li>
+      <li><a href="#"><strong>Fac-Ad</strong></a></li>
+    </ul>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <a href="/home/updateProfile" class="btn btn-primary navbar-btn" >Update Profile</a>
+    <a href="/logout/" class="btn btn-info navbar-btn" >Logout</a>
+</ul>
+  </div>
+</nav>
+
+			    <div class= "text-center">
+			    {% if messages %}
+				
+				    {% for message in messages %}
+				     <div class="alert alert-{{ message.tags }}" role = 'alert'>
+				     <h6>{{ message }}</h6>
+				 </div>
+				    {% endfor %}
+				
+				{% endif %}
+			</div>
+
+<center>
+<fieldset>
+    <legend>Details of {{name}}</legend>
+    <table style="border-color: blue">
+      <tr>
+        
+        <th> Companies </th>
+        <th> </th>
+      </tr>
+      {% for company in companies %}
+      <tr>
+        <td>{{company}}</td>
+        <td><a href="http://127.0.0.1:8000/add/application/{{company.id}}/" name ="company_id"  value='{{company.id}}'><button>Apply</button></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+
+</fieldset>
+</center>
+
+
+<div class="footer">
+  <p>National Institute of Technology, Warangal - 506004, TS, INDIA | NITWGL Phone: +91-870-2459191 | FAX : +91-870-2459547</p>
+  <p>Copyright © NIT, Warangal</p>
+</div> 
+ 
+</body>
+</html>

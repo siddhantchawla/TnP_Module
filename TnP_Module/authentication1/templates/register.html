@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 3rem 'Fira Sans', sans-serif;
+}
+
+label {
+    display: inline-block;
+    font-size: 2rem;
+    width: 10%;
+}
+
+input[type='text'],
+input[type='password'] {
+    width: 20%;
+}
+
+input {
+    margin: 0.9rem 0;
+}
+
+</style>
+
+<body class="bd">
+
+<nav class="navbar navbar-default" style="background-color:#17232B">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"><strong>Home</strong></a></li>
+      <li><a href="#"><strong>News</strong></a></li>
+      <li><a href="#"><strong>Fac-Ad</strong></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <a href="/login/" class="btn btn-primary navbar-btn" >Login</a>
+    <a href="/register/" class="btn btn-info navbar-btn" >Register</a>
+    </div>
+  </ul>
+  </div>
+
+</nav>
+
+<center>
+<fieldset>
+    <legend>Register</legend>
+
+    <div class='container'>
+        <div class = 'row'>
+          <div class = 'col'>
+            <div class = 'col-sm-6 col-12'>
+
+
+              <form method='POST'> {% csrf_token %}
+
+                {% if error %}
+                  <div class="alert alert-danger alert-dismissable">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>{{error}}</strong>
+                  </div>
+                {% endif %}
+                
+                {{ form }}  
+                <button type='submit' class="btn btn-info navbar-btn">Register</button>
+              </form>
+
+          </div>
+          </div>
+        </div>
+    </div>
+
+   
+
+</fieldset>
+</center>
+
+
+<div class="footer">
+  <p>National Institute of Technology, Warangal - 506004, TS, INDIA | NITWGL Phone: +91-870-2459191 | FAX : +91-870-2459547</p>
+  <p>Copyright © NIT, Warangal</p>
+</div> 
+ 
+</body>
+</html>

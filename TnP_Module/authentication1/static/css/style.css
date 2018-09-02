@@ -1,0 +1,22 @@
+.navbar .navbar-default {
+    background-color: #3278BD;
+    border-color: #273215;
+}
+li a.active {
+    background-color: # 273215;
+    color: white;
+}
+li a:hover{
+  background-color: #FFFFFF;
+    color: white;
+}
+.footer{
+	position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #17232B;
+   color: white;
+   text-align: center;
+   padding: 40px 00px 5px 0px;
+}

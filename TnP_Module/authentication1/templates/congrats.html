@@ -1,0 +1,55 @@
+{% load staticfiles%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CONGRATS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href='{../css/congrats.css}'>
+    <script type="text/javascript" src="demo-only/demo.js"></script>
+    <!--script type="text/javascript" src="script/debug.js"></script-->
+    <script type="text/javascript" src="script/soundmanager2-nodebug-jsmin.js"></script>
+    <script type="text/javascript" src="script/fireworks.js"></script>
+  </head>
+  <body>
+    <style >
+      *{
+  margin: 0px;
+  padding: 0px;
+}
+.header{
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  height:200px;
+  border:2px solid red;
+  margin-top: 170px;
+  background-color: white;
+}
+body{
+  background-color: rgba(165, 232, 58,0.8);
+}
+.congo{
+  margin-top: 20px;
+  margin-left: 150px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.receive{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  margin-top: 70px;
+  margin-left: 240px;
+}
+    </style>
+    <div class="container">
+      <div class="header">
+          <h2 class="congo">CONGRATS! YOU HAVE BEEN PLACED</h2>
+          <h4 class="receive">You, will receive your joining letter soon!</h4>
+      </div>
+    </div>
+  </body>
+</html>
